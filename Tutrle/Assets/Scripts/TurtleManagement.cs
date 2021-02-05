@@ -17,7 +17,7 @@ public class TurtleManagement : MonoBehaviour
         FindTurtle();
          //put your code  for Turtle  bellow :
          Turtle.Move(10);
-        Turtle.Turn(60);
+         Turtle.Turn(90); 
          
      }
 }

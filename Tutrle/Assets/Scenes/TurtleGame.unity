@@ -419,14 +419,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1668347939, guid: c3255ee1ef7ab463ab75b6c0c08f108e, type: 3}
-      propertyPath: m_Speed
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 1668347939, guid: c3255ee1ef7ab463ab75b6c0c08f108e, type: 3}
-      propertyPath: m_Acceleration
-      value: 15
-      objectReference: {fileID: 0}
     - target: {fileID: 969953626656748552, guid: c3255ee1ef7ab463ab75b6c0c08f108e,
         type: 3}
       propertyPath: m_RootOrder
@@ -486,16 +478,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Turtle
-      objectReference: {fileID: 0}
-    - target: {fileID: 9221227043214845774, guid: c3255ee1ef7ab463ab75b6c0c08f108e,
-        type: 3}
-      propertyPath: canBrush
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9221227043214845774, guid: c3255ee1ef7ab463ab75b6c0c08f108e,
-        type: 3}
-      propertyPath: interval
-      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3255ee1ef7ab463ab75b6c0c08f108e, type: 3}
