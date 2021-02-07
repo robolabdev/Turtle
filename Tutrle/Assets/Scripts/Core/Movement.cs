@@ -20,13 +20,14 @@ public class Movement : MonoBehaviour
 
     void Start()
     {
-        vector3List.Add(transform.position);
+        //vector3List.Add(transform.position);
         agent = GetComponent<NavMeshAgent>();
         foreach(Vector3 v in vector3List)
         {
             Instantiate(point,v,transform.rotation);
         }
-
+        vector3List.Add(vector3List[0]);
+        transform.position = vector3List[0];
 
     }
 
