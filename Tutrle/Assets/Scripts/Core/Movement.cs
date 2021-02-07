@@ -26,6 +26,7 @@ public class Movement : MonoBehaviour
         {
             Instantiate(point,v,transform.rotation);
         }
+        Move(0);
         vector3List.Add(vector3List[0]);
         transform.position = vector3List[0];
 
