@@ -11,30 +11,33 @@ public class Movement : MonoBehaviour
     public List<Sequence> listOfSequence=  new List<Sequence>();
     public List<Vector3> vector3List= new List<Vector3>();
     public NavMeshAgent agent;
+
+    Vector3 tempLocation;
+
+    public float Speed = 5;
+
     // Start is called before the first frame update
     void Awake()
-    { 
-        
+    {
     }
 
 
     void Start()
     {
-        //vector3List.Add(transform.position);
-        agent = GetComponent<NavMeshAgent>();
-        foreach(Vector3 v in vector3List)
+
+        transform.position = vector3List[0];  
+        agent = GetComponent<NavMeshAgent>(); 
+        foreach (Vector3 v in vector3List)
         {
             Instantiate(point,v,transform.rotation);
-        }
-        Move(0);
-        vector3List.Add(vector3List[0]);
-        transform.position = vector3List[0];
+        }  
 
     }
 
     void Update()
     {
-        if(vector3List.Count > 0)
+        agent.speed = Speed;
+        if (vector3List.Count > 0)
        { 
            if(Vector3.Distance(vector3List[0],transform.position)>0.2f)
             {
@@ -52,8 +55,8 @@ public class Movement : MonoBehaviour
     public void Move( float  distance)
     {
         i++;
-        Vector3 currentPoint = transform.position; 
-        Vector3  targetPoint = transform.forward * distance; 
+        Vector3 currentPoint = transform.position;  
+        Vector3  targetPoint = transform.forward * distance + tempLocation; 
         Sequence temp = new Sequence(currentPoint,targetPoint,i);
         listOfSequence.Add(temp);
         vector3List.Add(targetPoint);
@@ -62,7 +65,7 @@ public class Movement : MonoBehaviour
 
     public void Turn(float angle)
     {
-        transform.Rotate(0,angle,0);
+        transform.Rotate(0,angle,0); 
     }
 
     public void TurnLeft()

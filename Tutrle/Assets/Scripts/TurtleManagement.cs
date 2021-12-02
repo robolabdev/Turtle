@@ -15,9 +15,13 @@ public class TurtleManagement : MonoBehaviour
      void Awake()
      {
         FindTurtle();
-         //put your code  for Turtle  bellow :
-         Turtle.Move(10);
-         Turtle.Turn(90); 
-         
-     }
+        //put your code  for Turtle  bellow :   
+        int i = 0;
+        while(i<=4)
+        { 
+            Turtle.Move(10);
+            Turtle.Turn(90);
+            i++;
+        }
+    }
 }
