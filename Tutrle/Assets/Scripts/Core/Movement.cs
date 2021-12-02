@@ -59,6 +59,7 @@ public class Movement : MonoBehaviour
         Vector3  targetPoint = transform.forward * distance + tempLocation; 
         Sequence temp = new Sequence(currentPoint,targetPoint,i);
         listOfSequence.Add(temp);
+        transform.position = targetPoint;
         vector3List.Add(targetPoint);
          
     }

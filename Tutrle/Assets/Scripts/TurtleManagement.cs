@@ -8,7 +8,9 @@ public class TurtleManagement : MonoBehaviour
     Movement Turtle; 
     public void FindTurtle()
     {
-        Turtle = GameObject.FindObjectOfType<Movement>(); 
+        Turtle = GameObject.FindObjectOfType<Movement>();
+        Turtle.Turn(0);
+        Turtle.Move(0);
     }
 
     #endregion
@@ -16,12 +18,7 @@ public class TurtleManagement : MonoBehaviour
      {
         FindTurtle();
         //put your code  for Turtle  bellow :   
-        int i = 0;
-        while(i<=4)
-        { 
-            Turtle.Move(10);
-            Turtle.Turn(90);
-            i++;
-        }
+        Turtle.Turn(0);
+        Turtle.Move(10); 
     }
 }
